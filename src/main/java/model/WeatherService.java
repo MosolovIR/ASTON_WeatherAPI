@@ -2,20 +2,20 @@ package model;
 
 import model.weather.Weather;
 
-public class WeatherSerivce implements Service {
+public class WeatherService implements Service {
     private Connection connection;
     private JsonFormatter jsonFormatter;
     private static final String EMPTY_ERROR = "Вы не ввели город";
     private static final String CITY_ERROR = "Неверное название города";
 
-    public WeatherSerivce() {
-        connection = new Connection();
-        jsonFormatter = new JsonFormatter();
+    public WeatherService() {
+        this.connection = new Connection();
+        this.jsonFormatter = new JsonFormatter();
     }
 
     @Override
     public String get(String city) {
-        if (city.equals("")) {
+        if (city.isEmpty()) {
             return EMPTY_ERROR;
         }
 

@@ -1,7 +1,7 @@
 package presenter;
 
 import model.Service;
-import model.WeatherSerivce;
+import model.WeatherService;
 import view.View;
 
 public class Presenter {
@@ -10,7 +10,7 @@ public class Presenter {
 
     public Presenter(View view) {
         this.view = view;
-        service = new WeatherSerivce();
+        service = new WeatherService();
     }
 
     public void getInfo(String city) {
