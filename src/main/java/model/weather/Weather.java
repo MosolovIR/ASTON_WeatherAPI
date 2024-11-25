@@ -22,11 +22,9 @@ public class Weather {
 
     @Override
     public String toString() {
-        return "Город:'" + location.getName() + '\'' + '\n' +
+        return "Город:'" + location.getName() + '\n' +
                "Температура:" + current.getTemperature() + " градусов (по Цельсию)" + '\n' +
                "Атмосферное давление: " + current.getPressure() +" мм. ртутного столба"+ '\n' +
-               "Влажность воздуха: " + current.getHumidity() + " % "+ '\n' +
-               "Широта: " + location.getLat() + '\'' + '\n' +
-               "Долгота: " + location.getLon() + '\'';
+               "Влажность воздуха: " + current.getHumidity() + " % ";
     }
 }
