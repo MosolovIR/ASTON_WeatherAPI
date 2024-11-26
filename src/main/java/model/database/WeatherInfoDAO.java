@@ -104,12 +104,10 @@ public class WeatherInfoDAO {
         }
     }
 
-    public void addCityWithWeatherDataAndLog(String city, Weather weather) throws SQLException {
+    public void addWeatherDataWithLog(String city, Weather weather) throws SQLException {
         Connection connection = DatabaseConnection.getConnection();
         try {
             connection.setAutoCommit(false);
-            addCity(city);
-
             int cityId = getCityId(city);
 
             saveWeatherData(cityId, weather);

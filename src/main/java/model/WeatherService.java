@@ -26,7 +26,8 @@ public class WeatherService implements Service {
             String info = connection.getJSON(city);
             Weather weather = jsonFormatter.parse(info);
             String answer = weather.toString();
-            weatherInfoDAO.addCityWithWeatherDataAndLog(city, weather);
+            weatherInfoDAO.addCity(city);
+            weatherInfoDAO.addWeatherDataWithLog(city, weather);
 
             return answer;
         } catch (NullPointerException e) {
