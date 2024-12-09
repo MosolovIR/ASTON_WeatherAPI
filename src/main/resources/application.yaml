@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: admin
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+weatherstack:
+  api-key: b237f996fbe058349ad1d623f9369dc0
